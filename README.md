@@ -27,12 +27,6 @@ Self-shadowing effects significantly impact Solar Radiation Pressure (SRP) model
 
 <div align="center">
 
-### Example Spacecraft Model
-
-<img src="Model_ex1.png" alt="Generated Spacecraft Model" width="45%"/> <img src="Model_ex1_post.png" alt="Self-Shadowing Analysis" width="45%"/>
-
-*Left: Generated spacecraft geometry. Right: Self-shadowing analysis (green = sunlit, red = shadowed)*
-
 </div>
 
 ---
@@ -61,12 +55,6 @@ Five self-shadowing algorithms adapted from computer graphics for spacecraft SRP
 - Export to CSV for further analysis
 
 <div align="center">
-
-### Performance Scaling
-
-<img src="time_vs_polygons_log.png" alt="Execution Time vs Polygon Count" width="70%"/>
-
-*Computational time scaling with polygon count for all implemented algorithms*
 
 </div>
 
@@ -152,16 +140,6 @@ cd SatSelf-Shadow
 
 ---
 
-## 📊 Key Findings
-
-This study presents a comprehensive benchmark of self-shadowing algorithms adapted from computer graphics for accurate SRP modeling in spacecraft dynamics. Evaluating five methods across a synthetic dataset of 1000 spacecraft models demonstrates significant variations in computational efficiency and accuracy:
-
-✅ **Ray Casting with BVH** emerged as the most robust approach, achieving perfect accuracy with linear scaling and runtimes suitable for precise orbit determination and attitude control
-
-✅ **Shadow Mapping** offers the highest speed at acceptable accuracy levels (95-97%), making it ideal for real-time or resource-constrained scenarios
-
-✅ **Systematic comparison** across multiple methods and diverse configurations promotes general-purpose, integrable solutions for numerical propagators
-
 ### Future Directions
 
 - **Enhanced geometries**: Integration with detailed CAD models of real spacecraft beyond primitive shapes
@@ -179,7 +157,7 @@ This project enables:
 1. **Orbit Determination** - Accurate SRP modeling improves orbit prediction
 2. **Attitude Dynamics** - Self-shadowing affects torque calculations
 3. **Thermal Analysis** - Shadow patterns determine temperature distribution
-4. **Mission Planning** - Power availability estimates for solar-powered spacecraft
+4. **Mission Planning** - Prediction of reaction wheel desaturation events
 5. **Real-time Simulation** - Fast algorithms enable hardware-in-the-loop testing
 
 ---
@@ -205,15 +183,6 @@ std::vector<int> calculate_labels_your_algorithm(
 
 If you use this code in your research, please cite:
 
-```bibtex
-@software{spacecraft_shadow_analysis2025,
-  title={Comparative Analysis of Spacecraft Self-Shadowing Algorithms},
-  author={Your Name},
-  year={2025},
-  url={https://github.com/yourusername/Comparative-Analysis-Spacecraft-Self-Shadowing},
-  note={Open-source implementations for SRP self-shadow modeling}
-}
-```
 
 ---
 
@@ -252,9 +221,9 @@ Contributions are welcome! Please feel free to:
 
 ## 📞 Contact
 
-- **Author:** Your Name
-- **Email:** your.email@example.com
-- **Institution:** Your Research Institution
+- **Author:** Zapevalin P.R.
+- **Email:** pav9981@yandex.ru
+- **Institution:** ASTRO SPACE CENTER OF P.N. LEBEDEV PHYSICAL INSTITUTE
 - **Project Link:** [GitHub Repository](https://github.com/yourusername/Comparative-Analysis-Spacecraft-Self-Shadowing)
 
 ---
