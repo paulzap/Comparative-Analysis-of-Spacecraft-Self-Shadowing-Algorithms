@@ -213,7 +213,7 @@ Contributions are welcome! Please feel free to:
 
 ## 🙏 Acknowledgments
 
-- Research conducted at [Your Institution]
+- Research conducted at ASTRO SPACE CENTER OF P.N. LEBEDEV PHYSICAL INSTITUTE
 - Inspired by real-world challenges in spacecraft dynamics
 - Built with modern C++ and Python tools
 
@@ -235,3 +235,4 @@ Contributions are welcome! Please feel free to:
 ⭐ Star this repository to support open-source space research! ⭐
 
 </div>
+
