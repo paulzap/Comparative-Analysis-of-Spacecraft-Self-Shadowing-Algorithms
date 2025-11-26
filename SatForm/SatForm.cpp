@@ -38,7 +38,7 @@ static struct PyInitializer {
         if (PyStatus_IsError(status)) {
             throw std::runtime_error("Failed to append DLLs path: " + std::string(status.err_msg));
         }
-        status = PyWideStringList_Append(&config.module_search_paths, L"e:\\Перспективные задачи\\Задача 18. Нейросеть теней\\Моделирование\\SatForm3D\\SatForm");
+        status = PyWideStringList_Append(&config.module_search_paths, L"e:\\ГЏГҐГ°Г±ГЇГҐГЄГІГЁГўГ­Г»ГҐ Г§Г Г¤Г Г·ГЁ\\Г‡Г Г¤Г Г·Г  18. ГЌГҐГ©Г°Г®Г±ГҐГІГј ГІГҐГ­ГҐГ©\\ГЊГ®Г¤ГҐГ«ГЁГ°Г®ГўГ Г­ГЁГҐ\\SatForm3D\\SatForm");
         if (PyStatus_IsError(status)) {
             throw std::runtime_error("Failed to append project path: " + std::string(status.err_msg));
         }
@@ -62,10 +62,10 @@ void visualize_triangles(const std::string& csv_file, int step = 1) {
     }
 }
 
-#include <filesystem> // Добавьте этот include
+#include <filesystem> // Г„Г®ГЎГ ГўГјГІГҐ ГЅГІГ®ГІ include
 
 void generateSatellites(int count, double _pol_size, const std::string& folder, const std::string& filename, int step = 1) {
-    // Создаем папку, если она не существует
+    // Г‘Г®Г§Г¤Г ГҐГ¬ ГЇГ ГЇГЄГі, ГҐГ±Г«ГЁ Г®Г­Г  Г­ГҐ Г±ГіГ№ГҐГ±ГІГўГіГҐГІ
     if (!std::filesystem::exists(folder)) {
         std::filesystem::create_directories(folder);
         std::cout << "Created directory: " << folder << "\n";
@@ -83,7 +83,7 @@ void generateSatellites(int count, double _pol_size, const std::string& folder, 
         std::string csv_filename = folder + "/spc_" + std::to_string(i) + "_" + std::to_string(_pol_size).substr(0, 3) + ".csv";
         sat.partitionShapes(csv_filename);
 
-        // Визуализация на основе CSV-файла
+        // Г‚ГЁГ§ГіГ Г«ГЁГ§Г Г¶ГЁГї Г­Г  Г®Г±Г­Г®ГўГҐ CSV-ГґГ Г©Г«Г 
         //if (i == -1)
             visualize_triangles(csv_filename, step);
         //}
@@ -103,13 +103,14 @@ int main() {
     
     int num = 1000;
     std::string folder = "data3d_1.5";
-    //generateSatellites(num, 1.5, folder, folder + "/satellites.txt", 1);
+    generateSatellites(num, 1.5, folder, folder + "/satellites.txt", 1);
 
-    folder = "data3d_0.05";
-    generateSatellites(num, 0.05, folder, folder + "/satellites.txt", 1);
+    //folder = "data3d_0.05";
+    //generateSatellites(num, 0.05, folder, folder + "/satellites.txt", 1);
 
     //folder = "data3d_0.2";
     //generateSatellites(num, 0.2, folder, folder + "/satellites.txt", 1);
 
     return 0;
+
 }
