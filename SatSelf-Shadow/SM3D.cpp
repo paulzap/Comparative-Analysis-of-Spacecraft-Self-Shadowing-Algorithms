@@ -310,10 +310,18 @@ void run_interactive_mode(const std::string& folder_path, int num_files, bool us
     if (use_augmentation && theta_degrees == -1.0) {
         static std::random_device rd;
         static std::mt19937 gen(rd());
-        std::uniform_real_distribution<> theta_dist(0.0, 180.0);
+        //std::uniform_real_distribution<> theta_dist(0.0, 180.0);
         std::uniform_real_distribution<> phi_dist(0.0, 360.0);
         std::uniform_real_distribution<> alpha_dist(1.0, 360.0);
-        theta = theta_dist(gen);
+        std::uniform_real_distribution<> u_dist(-1.0, 1.0); // u ∈ [-1, 1]
+
+        
+
+        //theta = theta_dist(gen);
+        double u = u_dist(gen);
+        double theta_uniform = std::acos(u); // θ = arccos(u) ∈ [0, π] в радианах
+        theta = theta_uniform * 180.0 / M_PI; // Конвертация в градусы, если нужно
+
         phi = phi_dist(gen);
         alpha = alpha_dist(gen);
         std::cout << "Random rotation: theta = " << theta << " degrees, phi = " << phi << " degrees, alpha = " << alpha << " degrees\n";
@@ -433,7 +441,7 @@ void run_benchmark_mode(const std::string& folder_path, int num_files, bool use_
 
     // Setup random number generator with time-based seed for random mode
     std::mt19937 gen;
-    std::uniform_real_distribution<> theta_dist(0.0, 180.0);
+    std::uniform_real_distribution<> u_dist(-1.0, 1.0);
     std::uniform_real_distribution<> phi_dist(0.0, 360.0);
     std::uniform_real_distribution<> alpha_dist(1.0, 360.0);
     
@@ -445,11 +453,21 @@ void run_benchmark_mode(const std::string& folder_path, int num_files, bool use_
     }
 
     // Generate single random rotation for non-per-run mode
-    double theta = theta_degrees;
+    //double theta = theta_degrees;
+
+    double u = u_dist(gen);
+    double theta_uniform = std::acos(u); // θ = arccos(u) ∈ [0, π] в радианах
+    double theta = theta_uniform * 180.0 / M_PI; // Конвертация в градусы, если нужно
+
     double phi = phi_degrees;
     double alpha = alpha_degrees;
     if (use_augmentation && !random_per_run && theta_degrees == -1.0) {
-        theta = theta_dist(gen);
+        //theta = theta_dist(gen);
+
+        u = u_dist(gen);
+        theta_uniform = std::acos(u); // θ = arccos(u) ∈ [0, π] в радианах
+        theta = theta_uniform * 180.0 / M_PI; // Конвертация в градусы, если нужно
+
         phi = phi_dist(gen);
         alpha = alpha_dist(gen);
         std::cout << "Random rotation: theta = " << theta << " degrees, phi = " << phi << " degrees, alpha = " << alpha << " degrees\n";
@@ -508,7 +526,12 @@ void run_benchmark_mode(const std::string& folder_path, int num_files, bool use_
                 std::vector<int> reference_labels;
                 if (random_per_run && use_augmentation) {
                     // Generate new angles for this specific run
-                    run_theta = theta_dist(gen);
+                    //run_theta = theta_dist(gen);
+
+                    double u = u_dist(gen);
+                    double theta_uniform = std::acos(u); // θ = arccos(u) ∈ [0, π] в радианах
+                    run_theta = theta_uniform * 180.0 / M_PI; // Конвертация в градусы, если нужно
+
                     run_phi = phi_dist(gen);
                     run_alpha = alpha_dist(gen);
                     
