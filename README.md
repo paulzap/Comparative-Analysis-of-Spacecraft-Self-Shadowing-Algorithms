@@ -250,6 +250,7 @@ Contributions are welcome! Please feel free to:
 
 ⭐ Star this repository to support open-source space research! ⭐
 
-google-site-verification: google1a06a6e044392301.html
+<meta name="google-site-verification" content="wD-vkVjQGwCZ_I6pfAT_Y7n-2CzK5I1S1NBxXcYiraY" />
+
 </div>
 
