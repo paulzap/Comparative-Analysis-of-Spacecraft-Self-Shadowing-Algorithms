@@ -183,6 +183,21 @@ std::vector<int> calculate_labels_your_algorithm(
 
 If you use this code in your research, please cite:
 
+**Article:**  
+P.R. Zapevalin, "Comparative analysis of spacecraft self-shadowing algorithms", *Advances in Space Research*, 2026,  
+DOI: https://doi.org/10.1016/j.asr.2026.02.031
+URL: https://www.sciencedirect.com/science/article/abs/pii/S0273117726002127
+
+**BibTeX entry:**
+```bibtex
+@article{key2026,
+  title     = {Comparative analysis of spacecraft self-shadowing algorithms},
+  author    = {Zapevalin, P.},
+  journal   = {Advances in Space Research},
+  year      = {2026},
+  doi       = {https://doi.org/10.1016/j.asr.2026.02.031},
+  url       = {https://www.sciencedirect.com/science/article/abs/pii/S0273117726002127}
+}
 
 ---
 
