@@ -1,5 +1,11 @@
 # 🛰️ Comparative Analysis of Spacecraft Self-Shadowing Algorithms
 
+```
+
+<meta name="google-site-verification" content="wD-vkVjQGwCZ_I6pfAT_Y7n-2CzK5I1S1NBxXcYiraY" />
+
+```
+
 <div align="center">
 
 ![Header Image](https://img.shields.io/badge/Research-Spacecraft_Dynamics-blue?style=for-the-badge)
@@ -249,8 +255,6 @@ Contributions are welcome! Please feel free to:
 **Made with ❤️ for the spacecraft dynamics community**
 
 ⭐ Star this repository to support open-source space research! ⭐
-
-<meta name="google-site-verification" content="wD-vkVjQGwCZ_I6pfAT_Y7n-2CzK5I1S1NBxXcYiraY" />
 
 </div>
 
