@@ -198,6 +198,7 @@ URL: https://www.sciencedirect.com/science/article/abs/pii/S0273117726002127
   doi       = {https://doi.org/10.1016/j.asr.2026.02.031},
   url       = {https://www.sciencedirect.com/science/article/abs/pii/S0273117726002127}
 }
+```
 
 ---
 
