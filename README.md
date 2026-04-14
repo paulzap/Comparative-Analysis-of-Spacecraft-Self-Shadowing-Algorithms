@@ -1,10 +1,6 @@
 # 🛰️ Comparative Analysis of Spacecraft Self-Shadowing Algorithms
 
-```
 
-<meta name="google-site-verification" content="wD-vkVjQGwCZ_I6pfAT_Y7n-2CzK5I1S1NBxXcYiraY" />
-
-```
 
 <div align="center">
 
